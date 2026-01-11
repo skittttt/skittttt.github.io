@@ -1,2 +1,2 @@
 # skittttt.github.io
-Моё
+index.html
