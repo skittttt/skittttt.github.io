@@ -80,6 +80,46 @@
                 document.addEventListener('DOMContentLoaded', t_setvisRecs);
             }
         })();</script>
+
+<style id="theme-overrides">
+  /* Pastel neutrals on black background */
+  :root{
+    --blk:#000000;
+    --txt:#1a1a1a;
+    --white:#faf8f4;
+    --pink:#f3d9dd;
+    --beige:#ead8c6;
+    --milk:#e7d6bf;   /* топлёное молоко */
+    --pearl:#f1efe8;  /* жемчуг */
+    --cream:#f5ead8;  /* крем */
+    --stroke: rgba(0,0,0,0.08);
+  }
+
+  /* keep site background black */
+  body { background: var(--blk) !important; }
+  #rec1553329691 .t396__artboard,
+  #rec1553329691 .t396__filter,
+  #rec1553329691 .t396__carrier { background-color: var(--blk) !important; }
+
+  /* make all text inside the tilda blocks readable on light cards */
+  #rec1553329691 .tn-elem[data-elem-type="text"] .tn-atom,
+  #rec1553329691 .tn-elem[data-elem-type="text"] .tn-atom * {
+    color: var(--txt) !important;
+  }
+
+  /* card (shape) colors — update these if you want different mapping */
+  #rec1553329691 .tn-elem[data-elem-id="1762968834524"] .tn-atom { background-color: var(--pink)  !important; border: 1px solid var(--stroke) !important; }
+  #rec1553329691 .tn-elem[data-elem-id="1762968834545"] .tn-atom { background-color: var(--beige) !important; border: 1px solid var(--stroke) !important; }
+  #rec1553329691 .tn-elem[data-elem-id="1762968834589"] .tn-atom { background-color: var(--milk)  !important; border: 1px solid var(--stroke) !important; }
+  #rec1553329691 .tn-elem[data-elem-id="176296900457598490"] .tn-atom { background-color: var(--pearl) !important; border: 1px solid var(--stroke) !important; }
+  #rec1553329691 .tn-elem[data-elem-id="176296900301559310"] .tn-atom { background-color: var(--cream) !important; border: 1px solid var(--stroke) !important; }
+
+  /* Player: keep it readable (it sits on black) */
+  #ym-title { color: var(--white) !important; }
+  #ym-controls button { color: var(--txt) !important; background: var(--pearl) !important; }
+  #ym-box { background: var(--cream) !important; }
+</style>
+
 </head>
 
 <body class="t-body" style="margin:0;"> <!--allrecords-->
@@ -92,7 +132,7 @@
             <style>
                 #rec1553329691 .t396__artboard {
                     height: 750px;
-                    background-color: #f7f2eb;
+                    background-color: #f5f5f4;
                 }
 
                 #rec1553329691 .t396__filter {
@@ -134,7 +174,7 @@
 
                 #rec1553329691 .tn-elem[data-elem-id="1762968834524"] .tn-atom {
                     border-radius: 30px 30px 30px 30px;
-                    background-color: #f5efe8;
+                    background-color: #ffffff;
                     background-position: center center;
                     border-width: var(--t396-borderwidth, 0);
                     border-style: var(--t396-borderstyle, solid);
@@ -199,7 +239,7 @@
 
                 #rec1553329691 .tn-elem[data-elem-id="1762968834545"] .tn-atom {
                     border-radius: 30px 30px 30px 30px;
-                    background-color: #e6d2bf;
+                    background-color: #d6c8bb;
                     background-position: center center;
                     border-width: var(--t396-borderwidth, 0);
                     border-style: var(--t396-borderstyle, solid);
@@ -220,7 +260,7 @@
                 }
 
                 #rec1553329691 .tn-elem[data-elem-id="1762968834549"] {
-                    color: #fbf2e9;
+                    color: #1f2937;
                     text-align: LEFT;
                     z-index: 3;
                     top:20px;
@@ -233,7 +273,7 @@
 
                 #rec1553329691 .tn-elem[data-elem-id="1762968834549"] .tn-atom {
                     vertical-align: middle;
-                    color: #fbf2e9;
+                    color: #1f2937;
                     font-size: 36px;
                     font-family: 'Inter Tight', Arial, sans-serif;
                     line-height: 0.95;
@@ -266,7 +306,7 @@
                 }
 
                 #rec1553329691 .tn-elem[data-elem-id="1762968834558"] {
-                    color: #fbf2e9;
+                    color: #1f2937;
                     text-align: LEFT;
                     z-index: 3;
                     top:116px;
@@ -279,7 +319,7 @@
 
                 #rec1553329691 .tn-elem[data-elem-id="1762968834558"] .tn-atom {
                     vertical-align: middle;
-                    color: #fbf2e9;
+                    color: #1f2937;
                     font-size: 13px;
                     font-family: 'Inter Tight', Arial, sans-serif;
                     line-height: 0.95;
@@ -312,7 +352,7 @@
                 }
 
                 #rec1553329691 .tn-elem[data-elem-id="1762968834564"] {
-                    color: #fbf2e9;
+                    color: #1f2937;
                     text-align: LEFT;
                     z-index: 3;
                     top:116px;
@@ -325,7 +365,7 @@
 
                 #rec1553329691 .tn-elem[data-elem-id="1762968834564"] .tn-atom {
                     vertical-align: middle;
-                    color: #fbf2e9;
+                    color: #1f2937;
                     font-size: 13px;
                     font-family: 'Inter Tight', Arial, sans-serif;
                     line-height: 0.95;
@@ -369,7 +409,7 @@
 
                 #rec1553329691 .tn-elem[data-elem-id="1762968834589"] .tn-atom {
                     border-radius: 30px 30px 30px 30px;
-                    background-color: #f1e9e1;
+                    background-color: #fafaf9;
                     background-position: center center;
                     border-width: var(--t396-borderwidth, 0);
                     border-style: var(--t396-borderstyle, solid);
@@ -493,7 +533,7 @@
 
                 #rec1553329691 .tn-elem[data-elem-id="176296900457598490"] .tn-atom {
                     border-radius: 30px 30px 30px 30px;
-                    background-color: #f4e6d7;
+                    background-color: #f3efe9;
                     background-position: center center;
                     border-width: var(--t396-borderwidth, 0);
                     border-style: var(--t396-borderstyle, solid);
@@ -514,7 +554,7 @@
                 }
 
                 #rec1553329691 .tn-elem[data-elem-id="176296900458296960"] {
-                    color: #fbf2e9;
+                    color: #1f2937;
                     text-align: LEFT;
                     z-index: 3;
                     top:200px;
@@ -527,7 +567,7 @@
 
                 #rec1553329691 .tn-elem[data-elem-id="176296900458296960"] .tn-atom {
                     vertical-align: middle;
-                    color: #fbf2e9;
+                    color: #1f2937;
                     font-size: 14px;
                     font-family: 'Inter Tight', Arial, sans-serif;
                     line-height: 0.95;
@@ -563,7 +603,7 @@
                 }
 
                 #rec1553329691 .tn-elem[data-elem-id="176296979268543990"] {
-                    color: #fbf2e9;
+                    color: #1f2937;
                     text-align: LEFT;
                     z-index: 3;
                     top:218px;
@@ -576,7 +616,7 @@
 
                 #rec1553329691 .tn-elem[data-elem-id="176296979268543990"] .tn-atom {
                     vertical-align: middle;
-                    color: #fbf2e9;
+                    color: #1f2937;
                     font-size: 36px;
                     font-family: 'Inter Tight', Arial, sans-serif;
                     line-height: 0.95;
@@ -620,7 +660,7 @@
 
                 #rec1553329691 .tn-elem[data-elem-id="176296900301559310"] .tn-atom {
                     border-radius: 30px 30px 30px 30px;
-                    background-color: #f7f2eb;
+                    background-color: #f5f5f4;
                     background-position: center center;
                     border-width: var(--t396-borderwidth, 0);
                     border-style: var(--t396-borderstyle, solid);
@@ -677,7 +717,7 @@
                 }
 
                 #rec1553329691 .tn-elem[data-elem-id="176296904433720220"] {
-                    color: #fbf2e9;
+                    color: #1f2937;
                     text-align: LEFT;
                     z-index: 3;
                     top:348px;
@@ -691,7 +731,7 @@
                 #rec1553329691 .tn-elem[data-elem-id="176296904433720220"] .tn-atom {
                     vertical-align: middle;
                     white-space: nowrap;
-                    color: #fbf2e9;
+                    color: #1f2937;
                     font-size: 14px;
                     font-family: 'Inter Tight', Arial, sans-serif;
                     line-height: 0.95;
@@ -724,7 +764,7 @@
                 }
 
                 #rec1553329691 .tn-elem[data-elem-id="176296900302393840"] {
-                    color: #fbf2e9;
+                    color: #1f2937;
                     text-align: LEFT;
                     z-index: 3;
                     top:474px;
@@ -737,7 +777,7 @@
 
                 #rec1553329691 .tn-elem[data-elem-id="176296900302393840"] .tn-atom {
                     vertical-align: middle;
-                    color: #fbf2e9;
+                    color: #1f2937;
                     font-size: 14px;
                     font-family: 'Inter Tight', Arial, sans-serif;
                     line-height: 0.95;
@@ -842,7 +882,7 @@
                         data-field-left-res-320-value="20" data-field-height-res-320-value="68"
                         data-field-width-res-320-value="79" data-field-container-res-320-value="grid"
                         data-field-heightunits-res-320-value="px" data-field-textfit-res-320-value="autoheight">
-                        <div class='tn-atom'field='tn_text_1762968834549'>Ногинский<br>ПКИО</div>
+                        <div class='tn-atom' field='tn_text_1762968834549'>Ногинский<br>ПКИО</div>
                     </div>
                     <div class='t396__elem tn-elem tn-elem__15533296911762968834558' data-elem-id='1762968834558'
                         data-elem-type='text' data-field-top-value="116" data-field-left-value="620"
@@ -866,7 +906,7 @@
                         data-field-left-res-320-value="20" data-field-height-res-320-value="24"
                         data-field-width-res-320-value="121" data-field-container-res-320-value="grid"
                         data-field-heightunits-res-320-value="px" data-field-textfit-res-320-value="autoheight">
-                        <div class='tn-atom'field='tn_text_1762968834564'>Адрес:<br>Ногинск, Центральный городской парк</div>
+                        <div class='tn-atom' field='tn_text_1762968834564'>Адрес:<br>Ногинск, Центральный городской парк</div>
                     </div>
                     
                     
@@ -927,7 +967,7 @@
                         data-field-left-res-320-value="20" data-field-height-res-320-value="13"
                         data-field-width-res-320-value="86" data-field-container-res-320-value="grid"
                         data-field-heightunits-res-320-value="px" data-field-textfit-res-320-value="autoheight">
-                        <div class='tn-atom'field='tn_text_176296900458296960'>Воскресенье</div>
+                        <div class='tn-atom' field='tn_text_176296900458296960'>Воскресенье</div>
                     </div>
                     <div class='t396__elem tn-elem tn-elem__1553329691176296979268543990'
                         data-elem-id='176296979268543990' data-elem-type='text' data-field-top-value="218"
@@ -939,7 +979,7 @@
                         data-field-left-res-320-value="20" data-field-height-res-320-value="34"
                         data-field-width-res-320-value="112" data-field-container-res-320-value="grid"
                         data-field-heightunits-res-320-value="px" data-field-textfit-res-320-value="autoheight">
-                        <div class='tn-atom'field='tn_text_176296979268543990'>18 JAN</div>
+                        <div class='tn-atom' field='tn_text_176296979268543990'>18 JAN</div>
                     </div>
                     <div class='t396__elem tn-elem tn-elem__1553329691176296900301559310'
                         data-elem-id='176296900301559310' data-elem-type='shape' data-field-top-value="328"
@@ -976,7 +1016,7 @@
                         data-field-left-res-320-value="20" data-field-height-res-320-value="39"
                         data-field-width-res-320-value="60" data-field-container-res-320-value="grid"
                         data-field-textfit-res-320-value="autoheight">
-                        <div class='tn-atom'field='tn_text_176296904433720220'>Заберет<br>водитель<br>в 17:00</div>
+                        <div class='tn-atom' field='tn_text_176296904433720220'>Заберет<br>водитель<br>в 17:00</div>
                     </div>
                     <div class='t396__elem tn-elem tn-elem__1553329691176296900302393840'
                         data-elem-id='176296900302393840' data-elem-type='text' data-field-top-value="474"
@@ -988,7 +1028,7 @@
                         data-field-left-res-320-value="20" data-field-height-res-320-value="13"
                         data-field-width-res-320-value="75" data-field-container-res-320-value="grid"
                         data-field-textfit-res-320-value="autoheight">
-                        <div class='tn-atom'field='tn_text_176296900302393840'>Стоимость:<br>бесценно</div>
+                        <div class='tn-atom' field='tn_text_176296900302393840'>Стоимость:<br>бесценно</div>
                     </div>
                     <div class='t396__elem tn-elem tn-elem__15533296911767525208863' data-elem-id='1767525208863'
                         data-elem-type='html' data-field-top-value="520" data-field-left-value="440"
@@ -1000,36 +1040,36 @@
                         <div class='tn-atom tn-atom__html' style='overflow:hidden;border-radius:20px;'> <div id="ym-player-wrap" style="width:320px;">
   <div id="ym-controls" style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
     <button type="button" id="ym-prev" aria-label="Предыдущий трек"
-      style="flex:0 0 auto;height:32px;padding:0 12px;border:0;border-radius:10px;background:#fbf2e9;color:#000;font-family:'Inter Tight',Arial,sans-serif;font-size:12px;font-weight:600;cursor:pointer;">
+      style="flex:0 0 auto;height:32px;padding:0 12px;border:0;border-radius:10px;background:#1f2937;color:#000;font-family:'Inter Tight',Arial,sans-serif;font-size:12px;font-weight:600;cursor:pointer;">
       ◀︎
     </button>
 
-    <div id="ym-title" style="flex:1 1 auto;min-width:0;color:#fbf2e9;font-family:'Inter Tight',Arial,sans-serif;font-size:12px;font-weight:500;opacity:0.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+    <div id="ym-title" style="flex:1 1 auto;min-width:0;color:#1f2937;font-family:'Inter Tight',Arial,sans-serif;font-size:12px;font-weight:500;opacity:0.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
       —
     </div>
 
     <button type="button" id="ym-next" aria-label="Следующий трек"
-      style="flex:0 0 auto;height:32px;padding:0 12px;border:0;border-radius:10px;background:#fbf2e9;color:#000;font-family:'Inter Tight',Arial,sans-serif;font-size:12px;font-weight:600;cursor:pointer;">
+      style="flex:0 0 auto;height:32px;padding:0 12px;border:0;border-radius:10px;background:#1f2937;color:#000;font-family:'Inter Tight',Arial,sans-serif;font-size:12px;font-weight:600;cursor:pointer;">
       ▶︎
     </button>
   </div>
 
   <div id="ym-box" style="width:320px;height:180px;overflow:hidden;border-radius:20px;background:#f3ece4;position:relative;">
     <img id="ym-cover" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.92;user-select:none;pointer-events:none;" />
-    <div id="ym-time" style="position:absolute;left:12px;top:12px;color:#fbf2e9;font-family:'Inter Tight',Arial,sans-serif;font-size:12px;font-weight:500;opacity:0.85;pointer-events:none;">
+    <div id="ym-time" style="position:absolute;left:12px;top:12px;color:#1f2937;font-family:'Inter Tight',Arial,sans-serif;font-size:12px;font-weight:500;opacity:0.85;pointer-events:none;">
       0:00 / 0:00
     </div>
 
     <button type="button" id="ym-play" aria-label="Воспроизвести / Пауза"
       style="position:absolute;inset:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;">
       <div id="ym-play-icon"
-        style="width:56px;height:56px;border-radius:18px;background:#fbf2e9;color:#000;display:flex;align-items:center;justify-content:center;font-family:'Inter Tight',Arial,sans-serif;font-size:22px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.35);">
+        style="width:56px;height:56px;border-radius:18px;background:#1f2937;color:#000;display:flex;align-items:center;justify-content:center;font-family:'Inter Tight',Arial,sans-serif;font-size:22px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.35);">
         ▶︎
       </div>
     </button>
 
     <div id="ym-progress-wrap" style="position:absolute;left:12px;right:12px;bottom:12px;height:6px;background:rgba(254,244,229,.35);border-radius:999px;overflow:hidden;">
-      <div id="ym-progress" style="height:100%;width:0;background:#e6d2bf;border-radius:999px;"></div>
+      <div id="ym-progress" style="height:100%;width:0;background:#d6c8bb;border-radius:999px;"></div>
     </div>
 
     <audio id="ym-audio" preload="metadata" style="display:none;"></audio>
@@ -1106,7 +1146,7 @@ var current = 0;
         "font-family:'Inter Tight',Arial,sans-serif",
         'font-size:12px',
         'font-weight:600',
-        (i === current ? 'background:#e6d2bf;color:#000' : 'background:#fbf2e9;color:#000')
+        (i === current ? 'background:#d6c8bb;color:#000' : 'background:#1f2937;color:#000')
       ].join(';');
       b.addEventListener('click', function() {
         var wasPlaying = !audio.paused && !audio.ended;
@@ -1223,7 +1263,7 @@ var current = 0;
                 });</script>
             <style>
                 .t360__bar {
-                    background-color: #e6d2bf;
+                    background-color: #d6c8bb;
                 }
             </style>
             <script>t_onReady(function () { var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor); if (!isSafari) { document.body.insertAdjacentHTML('beforeend', '<div class="t360__progress"><div class="t360__bar"></div></div>'); setTimeout(function () { var bar = document.querySelector('.t360__bar'); if (bar) bar.classList.add('t360__barprogress'); }, 10); } }); function t360_onProgressLoad() { var bar = document.querySelector('.t360__bar'); if (!bar) return; bar.classList.remove('t360__barprogress'); bar.classList.add('t360__barprogressfinished'); setTimeout(function () { bar.classList.add('t360__barprogresshidden'); }, 20); setTimeout(function () { var progress = document.querySelector('.t360__progress'); if (progress) progress.style.display = 'none'; }, 500); }; if (document.readyState === 'complete') { setTimeout(t360_onProgressLoad, 60); } else { window.addEventListener('load', t360_onProgressLoad); }</script>
@@ -1233,7 +1273,7 @@ var current = 0;
             <div class="t674">
                 <style>
                     body {
-                        background-color: #f7f2eb !important;
+                        background-color: #f5f5f4 !important;
                         ;
                     }
 
