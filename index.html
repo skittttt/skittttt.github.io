@@ -137,14 +137,14 @@
     font-family:'Inter Tight', Arial, sans-serif;
     font-size:13px; font-weight:600;
     box-shadow:0 14px 38px rgba(0,0,0,.45);
-    transform: translate(-50%, -110%);
+    transform: translate(-50%, -50%);
     opacity:0;
     animation: easterToastIn .18s ease-out forwards, easterToastOut .25s ease-in forwards;
     animation-delay: 0s, 1.25s;
     pointer-events:none;
   }
-  @keyframes easterToastIn{ to{ opacity:1; transform: translate(-50%, -125%);} }
-  @keyframes easterToastOut{ to{ opacity:0; transform: translate(-50%, -140%);} }
+  @keyframes easterToastIn{ to{ opacity:1; transform: translate(-50%, -56%);} }
+  @keyframes easterToastOut{ to{ opacity:0; transform: translate(-50%, -62%);} }
 
   /* modal */
   #secret-modal{
@@ -1464,10 +1464,17 @@ var current = 0;
     // keep inside viewport
     var vw = window.innerWidth || 360;
     var vh = window.innerHeight || 640;
-    x = clamp(x, 30, vw - 30);
-    y = clamp(y, 60, vh - 20);
+    
 
-    t.style.left = x + 'px';
+    // Always show in the center of the screen (stack if several)
+    var centerX = vw / 2;
+    var centerY = vh / 2;
+    var stack = document.querySelectorAll('.easter-toast').length;
+    var offsetY = (stack % 3) * 56; // small vertical stack
+    x = centerX;
+    y = centerY + offsetY;
+    // x/y are set to center above
+t.style.left = x + 'px';
     t.style.top = y + 'px';
     document.body.appendChild(t);
     setTimeout(function(){ if(t && t.parentNode) t.parentNode.removeChild(t); }, 1700);
