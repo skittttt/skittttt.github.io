@@ -118,6 +118,101 @@
   #ym-title { color: var(--white) !important; }
   #ym-controls button { color: var(--txt) !important; background: var(--pearl) !important; }
   #ym-box { background: var(--cream) !important; }
+
+  /* Easter heart + compliments + secret video */
+  #easter-heart-btn{
+    width:44px;height:44px;border:0;background:transparent;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    padding:0; touch-action: manipulation;
+  }
+  #easter-heart-btn svg{ width:44px;height:44px; display:block; filter: drop-shadow(0 6px 14px rgba(0,0,0,.35)); }
+  #easter-heart-btn:active{ transform: scale(0.95); }
+  .easter-toast{
+    position:fixed; z-index:99999;
+    max-width:min(260px, 88vw);
+    padding:10px 12px;
+    border-radius:14px;
+    background:rgba(245,234,216,.98);
+    color:#1f2937;
+    font-family:'Inter Tight', Arial, sans-serif;
+    font-size:13px; font-weight:600;
+    box-shadow:0 14px 38px rgba(0,0,0,.45);
+    transform: translate(-50%, -110%);
+    opacity:0;
+    animation: easterToastIn .18s ease-out forwards, easterToastOut .25s ease-in forwards;
+    animation-delay: 0s, 1.25s;
+    pointer-events:none;
+  }
+  @keyframes easterToastIn{ to{ opacity:1; transform: translate(-50%, -125%);} }
+  @keyframes easterToastOut{ to{ opacity:0; transform: translate(-50%, -140%);} }
+
+  /* modal */
+  #secret-modal{
+    position:fixed; inset:0; z-index:99998;
+    display:none; align-items:center; justify-content:center;
+    background:rgba(0,0,0,.72);
+    padding:18px;
+  }
+  #secret-modal.open{ display:flex; }
+  #secret-modal .sm-card{
+    width:min(720px, 92vw);
+    background:#0b0b0b;
+    border-radius:18px;
+    box-shadow:0 22px 70px rgba(0,0,0,.55);
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+  }
+  #secret-modal .sm-top{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:10px 12px;
+    color:#f5ead8;
+    font-family:'Inter Tight', Arial, sans-serif;
+    font-size:13px; font-weight:600;
+    background:rgba(255,255,255,.04);
+  }
+  #secret-modal .sm-close{
+    border:0; background:rgba(245,234,216,.95);
+    color:#111; font-weight:800;
+    width:34px;height:34px;border-radius:12px;
+    cursor:pointer;
+  }
+  #secret-modal video{
+    width:100%;
+    height:auto;
+    max-height:72vh;
+    display:block;
+    background:#000;
+  }
+
+/* Secret heart image (no shadow) */
+#easter-heart-btn{
+  width: 52px;
+  height: 52px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+#easter-heart-btn .heart-img{
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  display: block;
+  transition: transform .18s ease;
+}
+#easter-heart-btn:active .heart-img{
+  transform: scale(0.92);
+}
+#easter-heart-btn:hover .heart-img{
+  transform: scale(1.03);
+}
+
+
+
 </style>
 
 </head>
@@ -834,7 +929,26 @@
                         ;
                     }
                 }
-            </style>
+            
+                /* Easter heart trigger */
+                #rec1553329691 .tn-elem[data-elem-id="999001"]{
+                    z-index: 20;
+                    top:276px;
+                    left: calc(50% - 600px + 708px);
+                    width: 44px;
+                    height: 44px;
+                }
+                @media screen and (max-width:1199px){
+                    #rec1553329691 .tn-elem[data-elem-id="999001"]{
+                        display: table;
+                        top:276px;
+                        left: calc(50% - 160px + 268px);
+                        width: 44px;
+                        height: 44px;
+                    }
+                }
+
+</style>
             <div class='t396'>
                 <div class="t396__artboard" data-artboard-recid="1553329691" data-artboard-screens="320,1200"
                     data-artboard-height="700" data-artboard-valign="center" data-artboard-upscale="window"
@@ -1030,7 +1144,21 @@
                         data-field-textfit-res-320-value="autoheight">
                         <div class='tn-atom' field='tn_text_176296900302393840'>Стоимость:<br>бесценно</div>
                     </div>
-                    <div class='t396__elem tn-elem tn-elem__15533296911767525208863' data-elem-id='1767525208863'
+                    
+                    <div class='t396__elem tn-elem tn-elem__1553329691999001' data-elem-id='999001'
+                        data-elem-type='html' data-field-top-value="276" data-field-left-value="708"
+                        data-field-height-value="44" data-field-width-value="44" data-field-axisy-value="top"
+                        data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px"
+                        data-field-leftunits-value="px" data-field-heightunits-value="px"
+                        data-field-widthunits-value="px" data-field-widthmode-value="fixed"
+                        data-field-heightmode-value="fixed" data-field-top-res-320-value="276"
+                        data-field-left-res-320-value="268" data-field-height-res-320-value="44"
+                        data-field-width-res-320-value="44" data-field-container-res-320-value="grid">
+                        <div class='tn-atom tn-atom__html' style='overflow:visible;'>
+                          <button id="easter-heart-btn" type="button" aria-label="Секретное сердечко"><img class="heart-img" src="/img/heart.png" alt="heart" /></button>
+                        </div>
+                    </div>
+<div class='t396__elem tn-elem tn-elem__15533296911767525208863' data-elem-id='1767525208863'
                         data-elem-type='html' data-field-top-value="520" data-field-left-value="440"
                         data-field-height-value="180" data-field-width-value="320" data-field-axisy-value="top"
                         data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px"
@@ -1288,6 +1416,105 @@ var current = 0;
     <script
         type="text/javascript">if (!window.mainTracker) { window.mainTracker = 'tilda'; }
             window.tildastatcookie = 'no'; setTimeout(function () { (function (d, w, k, o, g) { var n = d.getElementsByTagName(o)[0], s = d.createElement(o), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.key = k; s.id = "tildastatscript"; s.src = g; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, 'a0f851abbc3f38bd02c76e3f7bfd7f86', 'script', 'https://static.tildacdn.com/js/tilda-stat-1.0.min.js'); }, 2000);</script>
+
+<!-- Secret video modal (appears after 5 taps on the heart) -->
+<div id="secret-modal" role="dialog" aria-modal="true" aria-label="Секретное видео">
+  <div class="sm-card">
+    <div class="sm-top">
+      <div>Секрет открыт ✨</div>
+      <button class="sm-close" type="button" aria-label="Закрыть">✕</button>
+    </div>
+    <!-- IMPORTANT: upload your video to /vid/ and set filename below -->
+    <video id="secret-video" src="/vid/surprise.mp4" playsinline controls preload="metadata"></video>
+  </div>
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById('easter-heart-btn');
+  if(!btn) return;
+
+  var modal = document.getElementById('secret-modal');
+  var closeBtn = modal ? modal.querySelector('.sm-close') : null;
+  var video = document.getElementById('secret-video');
+
+  var taps = 0;
+  var need = 5;
+
+  const compliments = [
+  'Ты так красива, что я на секунду забываю, что хотел сказать.',
+  'Твои глаза — отдельный космос. В них хочется задержаться.',
+  'Ты выглядишь так свежо и нежно, будто в тебе всегда весна.',
+  'В тебе есть изящество, которое невозможно не заметить.',
+  'Ты ослепительна — и это совсем не преувеличение.',
+  'С тобой мне спокойно и счастливо. Ты правда умеешь согревать.',
+  'Я тобой восхищаюсь — в тебе есть и мягкость, и характер.',
+  'Ты такая гармоничная: в тебе всё на своём месте.',
+  'Этот образ тебе невероятно идёт. Ты умеешь быть стильной.',
+  'Рядом с тобой хочется делать для тебя только лучшее.',
+];
+
+  function clamp(v, min, max){ return Math.max(min, Math.min(max, v)); }
+
+  function toast(text, x, y){
+    var t = document.createElement('div');
+    t.className = 'easter-toast';
+    t.textContent = text;
+
+    // keep inside viewport
+    var vw = window.innerWidth || 360;
+    var vh = window.innerHeight || 640;
+    x = clamp(x, 30, vw - 30);
+    y = clamp(y, 60, vh - 20);
+
+    t.style.left = x + 'px';
+    t.style.top = y + 'px';
+    document.body.appendChild(t);
+    setTimeout(function(){ if(t && t.parentNode) t.parentNode.removeChild(t); }, 1700);
+  }
+
+  function openModal(){
+    if(!modal) return;
+    modal.classList.add('open');
+
+    try{
+      if(video){
+        video.currentTime = 0;
+        var p = video.play();
+        if(p && typeof p.catch === 'function') p.catch(function(){});
+      }
+    }catch(e){}
+  }
+
+  function closeModal(){
+    if(!modal) return;
+    modal.classList.remove('open');
+    try{ if(video){ video.pause(); } }catch(e){}
+  }
+
+  btn.addEventListener('click', function(e){
+    taps += 1;
+
+    var msg = compliments[(taps - 1) % compliments.length];
+    toast(msg, e.clientX || (window.innerWidth/2), e.clientY || (window.innerHeight/2));
+
+    if(taps >= need){
+      taps = 0;
+      openModal();
+    }
+  });
+
+  if(closeBtn) closeBtn.addEventListener('click', closeModal);
+  if(modal) modal.addEventListener('click', function(ev){
+    if(ev.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', function(ev){
+    if(ev.key === 'Escape') closeModal();
+  });
+})();
+</script>
+
 </body>
 
 </html>
