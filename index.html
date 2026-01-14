@@ -354,15 +354,19 @@
   display:flex; align-items:center; justify-content:space-between;
   padding:14px 16px;
   border-bottom:1px solid rgba(255,255,255,.08);
+  color: rgba(245,234,216,.95);
+  font-family:'Inter Tight', Arial, sans-serif;
 }
 .pm-title{
   font-weight:700;
   letter-spacing:.2px;
+  color: rgba(245,234,216,.95);
 }
 .pm-counter{
   opacity:.75;
   font-weight:600;
   margin-left:10px;
+  color: rgba(245,234,216,.72);
 }
 .pm-close{
   width:36px; height:36px;
@@ -2361,11 +2365,11 @@ var current = 0;
   var counterEl = document.getElementById('sm-counter');
   var video = document.getElementById('secret-video');
 
-  // Добавь свои видео в папку /vid/ и пропиши имена тут (порядок = порядок листания)
   var videos = [
     'vid/1.mp4',
     'vid/2.mp4',
-    'vid/3.mp4'
+    'vid/3.mp4',
+    'vid/4.mp4'
   ];
   var vIndex = 0;
 
