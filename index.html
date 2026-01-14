@@ -82,44 +82,44 @@
         })();</script>
 
 <style id="theme-overrides">
-  /* Pastel neutrals on black background */
+
   :root{
     --blk:#000000;
     --txt:#1a1a1a;
     --white:#faf8f4;
     --pink:#f3d9dd;
     --beige:#ead8c6;
-    --milk:#e7d6bf;   /* топлёное молоко */
-    --pearl:#f1efe8;  /* жемчуг */
-    --cream:#f5ead8;  /* крем */
+    --milk:#e7d6bf;   
+    --pearl:#f1efe8;  
+    --cream:#f5ead8;  
     --stroke: rgba(0,0,0,0.08);
   }
 
-  /* keep site background black */
+
   body { background: var(--blk) !important; }
   #rec1553329691 .t396__artboard,
   #rec1553329691 .t396__filter,
   #rec1553329691 .t396__carrier { background-color: var(--blk) !important; }
 
-  /* make all text inside the tilda blocks readable on light cards */
+
   #rec1553329691 .tn-elem[data-elem-type="text"] .tn-atom,
   #rec1553329691 .tn-elem[data-elem-type="text"] .tn-atom * {
     color: var(--txt) !important;
   }
 
-  /* card (shape) colors — update these if you want different mapping */
+
   #rec1553329691 .tn-elem[data-elem-id="1762968834524"] .tn-atom { background-color: var(--pink)  !important; border: 1px solid var(--stroke) !important; }
   #rec1553329691 .tn-elem[data-elem-id="1762968834545"] .tn-atom { background-color: var(--beige) !important; border: 1px solid var(--stroke) !important; }
   #rec1553329691 .tn-elem[data-elem-id="1762968834589"] .tn-atom { background-color: var(--milk)  !important; border: 1px solid var(--stroke) !important; }
   #rec1553329691 .tn-elem[data-elem-id="176296900457598490"] .tn-atom { background-color: var(--pearl) !important; border: 1px solid var(--stroke) !important; }
   #rec1553329691 .tn-elem[data-elem-id="176296900301559310"] .tn-atom { background-color: var(--cream) !important; border: 1px solid var(--stroke) !important; }
 
-  /* Player: keep it readable (it sits on black) */
+
   #ym-title { color: var(--white) !important; }
   #ym-controls button { color: var(--txt) !important; background: var(--pearl) !important; }
   #ym-box { background: var(--cream) !important; }
 
-  /* Easter heart + compliments + secret video */
+
   #easter-heart-btn{
     width:44px;height:44px;border:0;background:transparent;cursor:pointer;
     display:flex;align-items:center;justify-content:center;
@@ -146,7 +146,7 @@
   @keyframes easterToastIn{ to{ opacity:1; transform: translate(-50%, -56%);} }
   @keyframes easterToastOut{ to{ opacity:0; transform: translate(-50%, -62%);} }
 
-  /* modal */
+
   #secret-modal{
   position:fixed; inset:0; z-index:99998;
   display:none; align-items:center; justify-content:center;
@@ -247,7 +247,7 @@
   font-family:'Inter Tight', Arial, sans-serif;
 }
 
-/* Secret heart image (no shadow) */
+
 #easter-heart-btn{
   width: 52px;
   height: 52px;
@@ -300,7 +300,7 @@
 #easter-kiss-btn:active .easter-icon{
   transform: scale(0.94);
 }
-/* Easter star trigger */
+
                 #rec1553329691 .tn-elem[data-elem-id="999002"]{
                     z-index: 20;
                     top:230px;
@@ -316,7 +316,7 @@
                     }
                 }
 
-                /* Easter kiss trigger */
+               
                 #rec1553329691 .tn-elem[data-elem-id="999003"]{
                     z-index: 20;
                     top:390px;
@@ -333,7 +333,6 @@
                 }
 
 
-/* photos modal */
 #photos-modal{
   position:fixed; inset:0; z-index:99998;
   display:none; align-items:center; justify-content:center;
@@ -437,6 +436,103 @@
   .pm-card{ border-radius:18px; }
   #kiss-photo{ max-height: 62vh; }
   .pm-nav{ width:42px; height:42px; border-radius:16px; }
+}
+
+
+
+
+.tn-elem__15533296911762969084765 .tn-atom {
+  position: relative;
+}
+#bf7a-dot.secret-dot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.14);
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease;
+}
+#bf7a-dot.secret-dot:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.20);
+  transform: scale(1.08);
+}
+#bf7a-dot.secret-dot:active {
+  transform: scale(0.96);
+}
+#bf7a-dot.secret-dot:focus {
+  outline: none;
+}
+#bf7a-dot.secret-dot:focus-visible {
+  outline: 2px solid rgba(232, 214, 188, 0.85);
+  outline-offset: 2px;
+}
+
+
+#bf7a-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: rgba(0,0,0,0.72);
+  z-index: 99999;
+}
+#bf7a-modal.open {
+  display: flex;
+}
+#bf7a-modal .bf-card {
+  width: min(92vw, 520px);
+  max-height: 90vh;
+  background: rgba(20, 20, 20, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 22px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.55);
+  overflow: hidden;
+}
+#bf7a-modal .bf-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  color: #E8D6BC; 
+  font-family: inherit;
+  letter-spacing: 0.2px;
+}
+#bf7a-modal .bf-title {
+  font-size: 14px;
+  opacity: 0.95;
+}
+#bf7a-modal .bf-close {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #E8D6BC;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 12px;
+}
+#bf7a-modal .bf-close:hover {
+  background: rgba(232, 214, 188, 0.10);
+}
+#bf7a-modal .bf-body {
+  padding: 0 14px 14px 14px;
+}
+#bf7a-modal img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.03);
 }
 
 </style>
@@ -1156,7 +1252,7 @@
                     }
                 }
             
-                /* Easter heart trigger */
+               
                 #rec1553329691 .tn-elem[data-elem-id="999001"]{
                     z-index: 20;
                     top:276px;
@@ -1200,7 +1296,7 @@
 }
 
 
-                /* Easter star trigger */
+                
                 #rec1553329691 .tn-elem[data-elem-id="999002"]{
                     z-index: 20;
                     top:230px;
@@ -1216,7 +1312,7 @@
                     }
                 }
 
-                /* Easter kiss trigger */
+               
                 #rec1553329691 .tn-elem[data-elem-id="999003"]{
                     z-index: 20;
                     top:390px;
@@ -1233,7 +1329,7 @@
                 }
 
 
-/* photos modal */
+
 #photos-modal{
   position:fixed; inset:0; z-index:99998;
   display:none; align-items:center; justify-content:center;
@@ -1505,7 +1601,9 @@
                         <div class='tn-atom'> <img class='tn-atom__img t-img'
                                 data-original="img/bf7a3613-e893-412a-8d79-107a34a8.png"
                                 src="img/bf7a3613-e893-412a-8d79-107a34a8.png"
-                                alt='' imgfield='tn_img_1762969084765' /> </div>
+                                alt='' imgfield='tn_img_1762969084765' />
+                          <button id="bf7a-dot" class="secret-dot" type="button" aria-label="Открыть фото"></button>
+                        </div>
                     </div>
                     <div class='t396__elem tn-elem tn-elem__1553329691176296904433720220'
                         data-elem-id='176296904433720220' data-elem-type='text' data-field-top-value="348"
@@ -1746,14 +1844,14 @@ var current = 0;
     togglePlay();
   });
 
-  // Audio events
+
   audio.addEventListener('play', function() { setPlayState(true); });
   audio.addEventListener('pause', function() { setPlayState(false); });
   audio.addEventListener('ended', function() { setPlayState(false); updateProgress(); });
   audio.addEventListener('timeupdate', updateProgress);
   audio.addEventListener('loadedmetadata', updateProgress);
 
-  // Init
+
   setTrack(0, false);
 })();
 </script> </div>
@@ -1809,7 +1907,7 @@ var current = 0;
 }
 
 
-                /* Easter star trigger */
+                
                 #rec1553329691 .tn-elem[data-elem-id="999002"]{
                     z-index: 20;
                     top:230px;
@@ -1825,7 +1923,7 @@ var current = 0;
                     }
                 }
 
-                /* Easter kiss trigger */
+                
                 #rec1553329691 .tn-elem[data-elem-id="999003"]{
                     z-index: 20;
                     top:390px;
@@ -1842,7 +1940,7 @@ var current = 0;
                 }
 
 
-/* photos modal */
+
 #photos-modal{
   position:fixed; inset:0; z-index:99998;
   display:none; align-items:center; justify-content:center;
@@ -2665,6 +2763,60 @@ t.style.left = x + 'px';
     }
   });
 
+})();
+</script>
+
+
+<div id="bf7a-modal" role="dialog" aria-modal="true" aria-label="Фото">
+  <div class="bf-card">
+    <div class="bf-top">
+      <div class="bf-title">💛</div>
+      <button class="bf-close" type="button" aria-label="Закрыть">✕</button>
+    </div>
+    <div class="bf-body">
+      <img id="bf7a-modal-img" alt="photo" loading="eager" />
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var dot = document.getElementById('bf7a-dot');
+  var modal = document.getElementById('bf7a-modal');
+  if(!dot || !modal) return;
+
+  var img = document.getElementById('bf7a-modal-img');
+  var closeBtn = modal.querySelector('.bf-close');
+  var SRC = 'img/dot.png';
+
+  function openModal(){
+    img.src = SRC;
+    modal.classList.add('open');
+    document.body.classList.add('modal-open');
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    document.body.classList.remove('modal-open');
+  }
+
+  dot.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    openModal();
+  });
+
+  closeBtn && closeBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    closeModal();
+  });
+
+  modal.addEventListener('click', function(e){
+    if(e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
 })();
 </script>
 
